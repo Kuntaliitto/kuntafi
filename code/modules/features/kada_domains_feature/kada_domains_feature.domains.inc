@@ -10,8 +10,8 @@
 function kada_domains_feature_domain_default_domains() {
   $domains = array();
   $domains['local_kada_fi'] = array(
-    'subdomain' => 'demo.kada.fi',
-    'sitename' => 'Kada.fi',
+    'subdomain' => 'demo.kuntafi.dev',
+    'sitename' => 'DemoKunta',
     'scheme' => 'http',
     'valid' => 1,
     'weight' => -1,
