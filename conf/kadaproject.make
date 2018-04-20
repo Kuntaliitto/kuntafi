@@ -76,7 +76,7 @@ libraries[predis][download][url] = https://github.com/nrk/predis/archive/v1.0.0.
 
 ; Colorbox library
 libraries[colorbox][download][type] = get
-libraries[colorbox][download][url] = https://github.com/jackmoore/colorbox/archive/1.5.14.zip
+libraries[colorbox][download][url] = https://github.com/jackmoore/colorbox/archive/1.6.4.zip
 
 ; Openlayers library
 libraries[openlayers][download][type] = get
@@ -112,11 +112,8 @@ projects[auto_entitylabel][patch][] = "https://www.drupal.org/files/issues/auto_
 ; Fixes VBO update entity label action
 projects[auto_entitylabel][patch][] = "https://www.drupal.org/files/issues/node_operation_update-2503081-9.patch"
 
-projects[better_exposed_filters][type] = "module"
-projects[better_exposed_filters][subdir] = "contrib"
-projects[better_exposed_filters][download][type] = "git"
-projects[better_exposed_filters][download][url] = "http://git.drupal.org/project/better_exposed_filters.git"
-projects[better_exposed_filters][download][revision] = "4ff18a16ba7d8eb675c0b0cbeb3b20d8929050c4"
+projects[better_exposed_filters][[version] = 3.5
+projects[better_exposed_filters][subdir] = contrib
 
 projects[better_formats][version] = 1.0-beta1
 projects[better_formats][subdir] = contrib
@@ -162,7 +159,7 @@ projects[context_entity_field][type] = "module"
 projects[context_entity_field][subdir] = "contrib"
 projects[context_entity_field][download][type] = "git"
 projects[context_entity_field][download][url] = "http://git.drupal.org/project/context_entity_field.git"
-projects[context_entity_field][download][revision] = "3e60e94f8541a4c72b2ef207a9c073d45c7b9c14"
+projects[context_entity_field][download][revision] = "97170bcfb397c947034e5817814bb3eaac458e5f"
 ; Patch makes the view mode work better when there might be multiple entities
 projects[context_entity_field][patch][] = "https://www.drupal.org/files/issues/context_entity_field-view_mode-2022197-4.patch"
 
@@ -222,7 +219,7 @@ projects[eck][type] = module
 projects[eck][subdir] = contrib
 projects[eck][download][type] = "git"
 projects[eck][download][url] = "http://git.drupal.org/project/eck.git"
-projects[eck][download][revision] = "e29ecd7b68a485373e6923c101f54cc7095f56c9"
+projects[eck][download][revision] = "4c4cd916eca93469e90a90d90a2188f92cca2613"
 projects[eck][patch][] = "https://www.drupal.org/files/issues/entity_translation-2490530-1.patch"
 
 projects[elysia_cron][version] = 2.5
@@ -519,12 +516,8 @@ projects[relation][patch][better_rules] = "https://www.drupal.org/files/issues/1
 projects[relation_add][version] = 1.4
 projects[relation_add][subdir] = contrib
 
-; Dev-version contains fix for breakpoint calculations
-projects[responsive_menus][type] = "module"
-projects[responsive_menus][subdir] = "contrib"
-projects[responsive_menus][download][type] = "git"
-projects[responsive_menus][download][url] = "http://git.drupal.org/project/responsive_menus.git"
-projects[responsive_menus][download][revision] = "397a6edb8d1708689d118229429f4cdc5f9c7c41"
+projects[responsive_menus][version] = 1.6
+projects[responsive_menus][subdir] = contrib
 
 projects[restrict_node_page_view][version] = 1.2
 projects[restrict_node_page_view][subdir] = contrib
