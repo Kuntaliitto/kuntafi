@@ -20,7 +20,7 @@ api = 2
 ; Core project
 ; ------------
 projects[drupal][type] = core
-projects[drupal][version] = "7.53"
+projects[drupal][version] = "7.58"
 
 ; Use vocabulary machine name for permissions (https://www.drupal.org/node/995156)
 projects[drupal][patch][995156] = https://www.drupal.org/files/issues/995156-5_portable_taxonomy_permissions.patch
@@ -76,7 +76,7 @@ libraries[predis][download][url] = https://github.com/nrk/predis/archive/v1.0.0.
 
 ; Colorbox library
 libraries[colorbox][download][type] = get
-libraries[colorbox][download][url] = https://github.com/jackmoore/colorbox/archive/1.5.14.zip
+libraries[colorbox][download][url] = https://github.com/jackmoore/colorbox/archive/1.6.4.zip
 
 ; Openlayers library
 libraries[openlayers][download][type] = get
@@ -112,11 +112,8 @@ projects[auto_entitylabel][patch][] = "https://www.drupal.org/files/issues/auto_
 ; Fixes VBO update entity label action
 projects[auto_entitylabel][patch][] = "https://www.drupal.org/files/issues/node_operation_update-2503081-9.patch"
 
-projects[better_exposed_filters][type] = "module"
-projects[better_exposed_filters][subdir] = "contrib"
-projects[better_exposed_filters][download][type] = "git"
-projects[better_exposed_filters][download][url] = "http://git.drupal.org/project/better_exposed_filters.git"
-projects[better_exposed_filters][download][revision] = "4ff18a16ba7d8eb675c0b0cbeb3b20d8929050c4"
+projects[better_exposed_filters][[version] = 3.5
+projects[better_exposed_filters][subdir] = contrib
 
 projects[better_formats][version] = 1.0-beta1
 projects[better_formats][subdir] = contrib
@@ -142,19 +139,19 @@ projects[coffee][subdir] = contrib
 projects[ckeditor_link][version] = 2.3
 projects[ckeditor_link][subdir] = contrib
 
-projects[colorbox][version] = 2.8
+projects[colorbox][version] = 2.13
 projects[colorbox][subdir] = contrib
 
 projects[conditional_fields][version] = 3.0-alpha1
 projects[conditional_fields][subdir] = contrib
 
-projects[context][version] = 3.4
+projects[context][version] = 3.7
 projects[context][subdir] = contrib
-; Fixes context ui performance issues
+; TODO: https://www.drupal.org/node/873936 Fixes context ui performance issues
 projects[context][patch][] = "https://www.drupal.org/files/issues/context-node-taxonomy-performance-autocomplete-873936-47.patch"
 ; Set $conf['menu_override_parent_selector'] = false; in settings.php, it will disable
 ; menu links condition in context, but we don't want content related configuration to our features anyway
-projects[context][patch][] = "https://www.drupal.org/files/context_0001-Issue-873936-by-wojtha-Fabianx-Massively-increase-pe.patch"
+projects[context][patch][] = "https://www.drupal.org/files/issues/massively-increase-pe-reroll-873936-67.patch"
 
 ; Dev-version supports field "not empty" condition. NOTE: if new view modes are
 ; added, all contexts which use conditions from this module have to be resaved!
@@ -162,7 +159,7 @@ projects[context_entity_field][type] = "module"
 projects[context_entity_field][subdir] = "contrib"
 projects[context_entity_field][download][type] = "git"
 projects[context_entity_field][download][url] = "http://git.drupal.org/project/context_entity_field.git"
-projects[context_entity_field][download][revision] = "3e60e94f8541a4c72b2ef207a9c073d45c7b9c14"
+projects[context_entity_field][download][revision] = "97170bcfb397c947034e5817814bb3eaac458e5f"
 ; Patch makes the view mode work better when there might be multiple entities
 projects[context_entity_field][patch][] = "https://www.drupal.org/files/issues/context_entity_field-view_mode-2022197-4.patch"
 
@@ -204,7 +201,7 @@ projects[domaincontext][subdir] = contrib
 projects[domaincontext][patch][] = "https://www.drupal.org/files/1542406-5-domain-machine-names.patch"
 
 ; Provides some additional rules / views options
-projects[domain_integration][version] = 1.1
+projects[domain_integration][version] = 1.2
 projects[domain_integration][subdir] = contrib
 
 projects[domain_variable][version] = 1.1
@@ -214,7 +211,7 @@ projects[domain_variable][patch][] = "https://www.drupal.org/files/issues/domain
 
 projects[domain_feeds][version] = 1.4
 
-projects[ds][version] = 2.10
+projects[ds][version] = 2.15
 projects[ds][subdir] = contrib
 
 ; Dev-version which includes entity_translation support.
@@ -222,19 +219,19 @@ projects[eck][type] = module
 projects[eck][subdir] = contrib
 projects[eck][download][type] = "git"
 projects[eck][download][url] = "http://git.drupal.org/project/eck.git"
-projects[eck][download][revision] = "e29ecd7b68a485373e6923c101f54cc7095f56c9"
+projects[eck][download][revision] = "4c4cd916eca93469e90a90d90a2188f92cca2613"
 projects[eck][patch][] = "https://www.drupal.org/files/issues/entity_translation-2490530-1.patch"
 
-projects[elysia_cron][version] = 2.1
+projects[elysia_cron][version] = 2.5
 projects[elysia_cron][subdir] = contrib
 
 projects[email][version] = 1.3
 projects[email][subdir] = contrib
 
-projects[entity][version] = 1.8
+projects[entity][version] = 1.9
 projects[entity][subdir] = contrib
 
-projects[entityreference][version] = 1.2
+projects[entityreference][version] = 1.5
 projects[entityreference][subdir] = "contrib"
 
 projects[entityreference_prepopulate][version] = 1.5
@@ -280,10 +277,8 @@ projects[facetapi_select][download][type] = "git"
 projects[facetapi_select][download][url] = "http://git.drupal.org/project/facetapi_select.git"
 projects[facetapi_select][download][revision] = c960e188fd9ce1cbc21d63cec0e331b0ab70ff5f
 
-projects[features][version] = 2.2
+projects[features][version] = 2.10
 projects[features][subdir] = contrib
-; Remove annoying mtime from feature export which causes conflicts
-projects[features][patch][] = "https://www.drupal.org/files/issues/2381739-features-mtime.patch"
 
 projects[features_extra][version] = 1.0-beta1
 projects[features_extra][subdir] = contrib
@@ -305,7 +300,7 @@ projects[field_group][subdir] = contrib
 ;   autogenerated when its fixed.
 ; - The memory issue patch doesnt apply anymore, had to be recreated
 ;   (400 lines difference)
-projects[feeds][version] = "2.0-beta2"
+projects[feeds][version] = "2.0-beta4"
 projects[feeds][subdir] = "contrib"
 projects[feeds][patch][] = "../patches/feeds-2246755-var-export-memory-issue_for_2.0-beta-2.patch"
 
@@ -334,7 +329,7 @@ projects[feeds_tamper_conditional][subdir] = contrib
 projects[fitvids][version] = 1.17
 projects[fitvids][subdir] = contrib
 
-projects[flag][version] = 3.5
+projects[flag][version] = 3.9
 projects[flag][subdir] = contrib
 
 projects[flexslider][version] = 2.0-alpha3
@@ -396,7 +391,7 @@ projects[ip_geoloc][subdir] = contrib
 projects[job_scheduler][version] = 2.0-alpha3
 projects[job_scheduler][subdir] = contrib
 
-projects[jquery_update][version] = 2.5
+projects[jquery_update][version] = 2.7
 projects[jquery_update][subdir] = contrib
 
 projects[language_access][version] = 1.01
@@ -432,7 +427,7 @@ projects[menu_attributes][subdir] = contrib
 projects[menu_block][version] = 2.4
 projects[menu_block][subdir] = contrib
 
-projects[metatag][version] = 1.6
+projects[metatag][version] = 1.25
 projects[metatag][subdir] = contrib
 
 projects[module_filter][version] = 2.0-alpha2
@@ -460,10 +455,8 @@ projects[openlayers_geolocate_button][patch][] = "../patches/openlayers_geolocat
 projects[options_element][version] = 1.12
 projects[options_element][subdir] = contrib
 
-projects[og][version] = 2.7
+projects[og][version] = 2.9
 projects[og][subdir] = contrib
-; Fixes broken entity reference relationship
-projects[og][patch][] = "https://www.drupal.org/files/issues/add-gid-to-relationship-field-1890370-34.patch"
 
 projects[og_extras][version] = 1.2
 projects[og_extras][subdir] = "contrib"
@@ -489,7 +482,7 @@ projects[picture][subdir] = contrib
 projects[plupload][version] = 1.7
 projects[plupload][subdir] = contrib
 
-projects[prepopulate][version] = 2.0
+projects[prepopulate][version] = 2.1
 projects[prepopulate][subdir] = contrib
 
 projects[proj4js][version] = 1.2
@@ -516,19 +509,15 @@ projects[redis][subdir] = contrib
 ; Patch to support Predis 1.0
 projects[redis][patch][] = "https://www.drupal.org/files/issues/redis-predis-path-183934-19.patch"
 
-projects[relation][version] = 1.0
+projects[relation][version] = 1.2
 projects[relation][subdir] = contrib
-projects[relation][patch][better_rules] = "https://www.drupal.org/files/issues/relation-query_endpoints-1302788-33.patch"
+projects[relation][patch][better_rules] = "https://www.drupal.org/files/issues/1302788-40.patch"
 
 projects[relation_add][version] = 1.4
 projects[relation_add][subdir] = contrib
 
-; Dev-version contains fix for breakpoint calculations
-projects[responsive_menus][type] = "module"
-projects[responsive_menus][subdir] = "contrib"
-projects[responsive_menus][download][type] = "git"
-projects[responsive_menus][download][url] = "http://git.drupal.org/project/responsive_menus.git"
-projects[responsive_menus][download][revision] = "397a6edb8d1708689d118229429f4cdc5f9c7c41"
+projects[responsive_menus][version] = 1.6
+projects[responsive_menus][subdir] = contrib
 
 projects[restrict_node_page_view][version] = 1.2
 projects[restrict_node_page_view][subdir] = contrib
@@ -630,7 +619,7 @@ projects[taxonomy_display][subdir] = contrib
 projects[taxonomy_manager][version] = 1.0
 projects[taxonomy_manager][subdir] = contrib
 
-projects[title][version] = 1.0-alpha7
+projects[title][version] = 1.0-alpha9
 projects[title][subdir] = contrib
 
 projects[token][version] = 1.6
@@ -669,16 +658,16 @@ projects[views_content_cache][subdir] = contrib
 ; Fixing og compatibility: https://www.drupal.org/node/2054811#comment-9945729
 projects[views_content_cache][patch][og] = "https://www.drupal.org/files/issues/views_content_cache-og-2054811-9.patch"
 
-projects[views][version] = 3.8
+projects[views][version] = 3.20
 projects[views][subdir] = contrib
 
 projects[views_accordion][version] = 1.1
 projects[views_accordion][subdir] = contrib
 
-projects[views_data_export][version] = 3.0-beta9
+projects[views_data_export][version] = 3.2
 projects[views_data_export][subdir] = contrib
 
-projects[views_bulk_operations][version] = 3.2
+projects[views_bulk_operations][version] = 3.4
 projects[views_bulk_operations][subdir] = contrib
 
 projects[views_default_view_override][version] = 2.0

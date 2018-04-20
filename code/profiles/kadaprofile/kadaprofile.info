@@ -45,6 +45,7 @@ dependencies[] = jquery_update
 dependencies[] = libraries
 dependencies[] = module_filter
 dependencies[] = pathauto
+dependencies[] = redirect
 dependencies[] = rules
 dependencies[] = rules_conditional
 dependencies[] = strongarm
