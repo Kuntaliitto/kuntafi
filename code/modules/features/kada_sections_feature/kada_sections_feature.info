@@ -28,6 +28,7 @@ dependencies[] = og_menu_single
 dependencies[] = og_ui
 dependencies[] = options
 dependencies[] = publishcontent
+dependencies[] = prepopulate
 dependencies[] = quicktabs
 dependencies[] = restrict_node_page_view
 dependencies[] = strongarm
